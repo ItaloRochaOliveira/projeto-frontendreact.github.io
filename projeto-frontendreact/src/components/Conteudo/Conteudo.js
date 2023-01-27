@@ -4,11 +4,13 @@ import Main from "./Main/Main"
 import AsideCarrinho from "./AsideCarrinho/AsideCarrinho";
 import { ConteudoDaPagina } from "./style";
 
-export default function Conteudo() {
+export default function Conteudo({
+    img,
+}) {
     return(
         <ConteudoDaPagina>
             <AsideFiltro />
-            <Main />
+            <Main img={img}/>
             <AsideCarrinho />
         </ConteudoDaPagina>
     )

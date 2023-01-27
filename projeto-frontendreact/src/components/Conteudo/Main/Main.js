@@ -2,7 +2,9 @@ import React from "react";
 import Card from "./Card/Card"
 import { PrimeiraMain, PrimeiroArticleMain, SegundoArticleMain } from "./style";
 
-export default function Main() {
+export default function Main({
+    img,
+}) {
     return(
         <PrimeiraMain>
             <PrimeiroArticleMain>
@@ -20,10 +22,10 @@ export default function Main() {
             </PrimeiroArticleMain>
 
             <SegundoArticleMain>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Card img={img}/>
+                <Card img={img}/>
+                <Card img={img}/>
+                <Card img={img}/>
             </SegundoArticleMain>
         </PrimeiraMain>
     )

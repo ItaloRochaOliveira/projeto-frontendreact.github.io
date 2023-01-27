@@ -4,6 +4,8 @@ import Header from "./components/Header/Header"
 import Conteudo from "./components/Conteudo/Conteudo"
 import Footer from "./components/Footer/Footer"
 
+import appleIphone from "./img/appIephone13Pro.jpg"
+
 const GlobalStyle = createGlobalStyle`
   *{
     margin: 0;
@@ -22,7 +24,7 @@ function App() {
   return (
     <ContainerGeral>
       <Header />
-      <Conteudo />
+      <Conteudo img={appleIphone}/>
       <Footer />
 
       <GlobalStyle />

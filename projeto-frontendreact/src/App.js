@@ -4,7 +4,13 @@ import Header from "./components/Header/Header"
 import Conteudo from "./components/Conteudo/Conteudo"
 import Footer from "./components/Footer/Footer"
 
-import appleIphone from "./img/appIephone13Pro.jpg"
+import naveAcustica from "./img/nave-acustica.jpg"
+import kitSistemaSolar from "./img/kit-sistema-solar.jpg"
+import onibusEspacial from "./img/onibus-espacial.jpg"
+import espacoComMatematica from "./img/espaco-com-matematica.jpg"
+import coelhoEspacial from "./img/coelho-espacial.jpg"
+import brinquedoAstronauta from "./img/brinquedo-astronauta.jpg"
+
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -20,11 +26,50 @@ const ContainerGeral = styled.div`
   max-width: 100vw;
 `
 
+const produtos = [
+  {
+    id: 0,
+    name: "nave acustica",
+    value: 70,
+    img: naveAcustica
+  },
+  {
+    id: 1,
+    name: "kit Sistema Solar",
+    value: 80,
+    img: kitSistemaSolar
+  },
+  {
+    id: 2,
+    name: "Onibus espacial",
+    value: 207,
+    img: onibusEspacial
+  },
+  {
+    id: 3,
+    name: "briquedo de matematica com tematica astronauta",
+    value: 267,
+    img: espacoComMatematica 
+  },
+  {
+    id: 4,
+    name: "6 peças de coelhos astronautas",
+    value: 65,
+    img: coelhoEspacial
+  },
+  {
+    id: 5,
+    name: "Boneco astronauta com ornamento externo",
+    value: 83,
+    img: brinquedoAstronauta
+  }
+]
+
 function App() {
   return (
     <ContainerGeral>
       <Header />
-      <Conteudo img={appleIphone}/>
+      <Conteudo produtos={produtos}/>
       <Footer />
 
       <GlobalStyle />

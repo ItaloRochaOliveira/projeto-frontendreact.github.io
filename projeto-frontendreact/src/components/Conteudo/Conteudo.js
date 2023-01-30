@@ -8,13 +8,13 @@ export default function Conteudo({
     produtos,
 }) {
 
-    const [itensNoCarrinho, setItensNoCarrinho] = useState({
-        name: "",
-        value: "",
-    })
+    const [itensNoCarrinho, SetItensNoCarrinho] = useState([])
     const eventItensNoCarrinho = (itens) => {
-        setItensNoCarrinho(itens)
+        const novoCarrinho = [...itensNoCarrinho, itens]
+        SetItensNoCarrinho(novoCarrinho)
     }
+    
+    
     return(
         <ConteudoDaPagina>
             <AsideFiltro />

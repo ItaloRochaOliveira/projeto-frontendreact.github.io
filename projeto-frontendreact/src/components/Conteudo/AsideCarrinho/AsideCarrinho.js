@@ -5,13 +5,19 @@ import { ContainerCarrinho} from "./style";
 export default function AsideCarrinho({
     itensNoCarrinho,
 }) {
+    let soma = 0
+    const renderizarItensNoCarrinho = () => {
+        return itensNoCarrinho.map((item) => {
+            soma += Number(item.value.replace(",", "."))
+            return <RemoverOuComprar item={item}/>
+    })}
     return(
         <ContainerCarrinho>
             <h3>Carrinho:</h3>
 
-            <RemoverOuComprar itensCarrinho={itensNoCarrinho}/>
+            {renderizarItensNoCarrinho()}
 
-            <p>Valor total: R$0,00</p>
+            <p>R$ {soma.toFixed(2).replace(".", ",")}</p>
         </ContainerCarrinho>
     )
 }

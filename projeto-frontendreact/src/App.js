@@ -30,13 +30,13 @@ const produtos = [
   {
     id: 0,
     name: "nave acustica",
-    value: 70,
+    value: 70.10,
     img: naveAcustica
   },
   {
     id: 1,
     name: "kit Sistema Solar",
-    value: 80,
+    value: 89.99,
     img: kitSistemaSolar
   },
   {

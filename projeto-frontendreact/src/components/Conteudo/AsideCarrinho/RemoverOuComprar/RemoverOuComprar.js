@@ -2,16 +2,16 @@ import React from "react";
 import { ItensDoCarrinho, EspacoEntreItens } from "./style";
 
 export default function RemoverOuComprar({
-    ItensCarrinho,
+    item,
 }) {
 
-    console.log(ItensCarrinho)
+    console.log(item)
     return(
         <ItensDoCarrinho>
             1x
             <EspacoEntreItens />
 
-            produto n
+            {item.name}
 
             <EspacoEntreItens />
 

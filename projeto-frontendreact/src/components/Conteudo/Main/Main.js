@@ -6,7 +6,7 @@ export default function Main({
     produtos,
     eventItensNoCarrinho,
 }) {
-    const renderizarBonecos = () => {
+    const renderizarProdutos = () => {
         return produtos.map((produto) => {
             return <Card 
             name={produto.name} 
@@ -34,7 +34,7 @@ export default function Main({
             </PrimeiroArticleMain>
 
             <SegundoArticleMain>
-                {renderizarBonecos()}
+                {renderizarProdutos()}
             </SegundoArticleMain>
         </PrimeiraMain>
     )

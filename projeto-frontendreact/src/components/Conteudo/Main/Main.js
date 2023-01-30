@@ -3,8 +3,20 @@ import Card from "./Card/Card"
 import { PrimeiraMain, PrimeiroArticleMain, SegundoArticleMain } from "./style";
 
 export default function Main({
-    img,
+    produtos,
+    eventItensNoCarrinho,
 }) {
+    const renderizarBonecos = () => {
+        return produtos.map((produto) => {
+            return <Card 
+            name={produto.name} 
+            value={produto.value.toFixed(2).replace(".", ",")} 
+            img={produto.img}
+            
+            eventItensNoCarrinho={eventItensNoCarrinho}
+            />
+        })
+    }
     return(
         <PrimeiraMain>
             <PrimeiroArticleMain>
@@ -22,10 +34,7 @@ export default function Main({
             </PrimeiroArticleMain>
 
             <SegundoArticleMain>
-                <Card img={img}/>
-                <Card img={img}/>
-                <Card img={img}/>
-                <Card img={img}/>
+                {renderizarBonecos()}
             </SegundoArticleMain>
         </PrimeiraMain>
     )

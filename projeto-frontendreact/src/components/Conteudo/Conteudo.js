@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import AsideFiltro from "./AsideFiltro/AsideFiltro";
 import Main from "./Main/Main"
 import AsideCarrinho from "./AsideCarrinho/AsideCarrinho";
 import { ConteudoDaPagina } from "./style";
 
 export default function Conteudo({
-    img,
+    produtos,
 }) {
+
+    const [itensNoCarrinho, setItensNoCarrinho] = useState({
+        name: "",
+        value: "",
+    })
+    const eventItensNoCarrinho = (itens) => {
+        setItensNoCarrinho(itens)
+    }
     return(
         <ConteudoDaPagina>
             <AsideFiltro />
-            <Main img={img}/>
-            <AsideCarrinho />
+            <Main produtos={produtos} eventItensNoCarrinho={eventItensNoCarrinho}/>
+            <AsideCarrinho itensNoCarrinho={itensNoCarrinho}/>
         </ConteudoDaPagina>
     )
 }

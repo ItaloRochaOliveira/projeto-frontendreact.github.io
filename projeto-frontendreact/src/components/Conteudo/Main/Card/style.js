@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const CardBox = styled.div`
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,6 +20,7 @@ export const CardBox = styled.div`
 
 export const ImageCard = styled.img`
     max-width: 100%;
+    min-heigth: 50%;
     max-heigth: 60%;
 `
 
@@ -25,7 +28,16 @@ export const EspacoEntreItens = styled.div`
     margin: 10px;
 `
 
+export const NomeDoProduto = styled.p`
+    margin: 10px 0;
+    text-align: center;
+`
+
 export const BotaoDoCard = styled.button`
+    position: absolute;
+    bottom: 0;
+
+    margin: 10px;
     padding: 5px;
     border: 0.1px solid black;
     border-radius: 25px;

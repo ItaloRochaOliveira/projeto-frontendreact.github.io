@@ -1,20 +1,26 @@
 import React from "react";
-import { BotaoDoCard, CardBox, EspacoEntreItens, ImageCard } from "./style";
+import { BotaoDoCard, CardBox, EspacoEntreItens, ImageCard, NomeDoProduto } from "./style";
 
 export default function Card({
+    name,
+    value,
     img,
+
+    eventItensNoCarrinho,
 }) {
     return(
         <CardBox>
             <ImageCard src={img} />
 
             <EspacoEntreItens />
-            <p>Iphone 13 Pro Max</p>
-            <EspacoEntreItens />
-            <p>R$ 8.499,00</p>
+            <NomeDoProduto>{name}</NomeDoProduto>
+            <NomeDoProduto>R$ {value}</NomeDoProduto>
             <EspacoEntreItens />
 
-            <BotaoDoCard>Adicionar ao carrinho</BotaoDoCard>
+            <BotaoDoCard onClick={() => {eventItensNoCarrinho({
+                name: name,
+                value: value,
+            })}}>Adicionar ao carrinho</BotaoDoCard>
             <EspacoEntreItens />
         </CardBox>
     )

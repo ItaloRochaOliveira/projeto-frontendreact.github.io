@@ -3,11 +3,10 @@ import { ItensDoCarrinho, EspacoEntreItens } from "./style";
 
 export default function RemoverOuComprar({
     item,
+    removerDoCarrinho,
 }) {
-
-    console.log(item)
     return(
-        <ItensDoCarrinho>
+        <ItensDoCarrinho key={item.id}>
             1x
             <EspacoEntreItens />
 
@@ -15,7 +14,7 @@ export default function RemoverOuComprar({
 
             <EspacoEntreItens />
 
-            <button>remover</button>
+            <button onClick={() => removerDoCarrinho(item.id)}>remover</button>
         </ItensDoCarrinho>
     )
 }

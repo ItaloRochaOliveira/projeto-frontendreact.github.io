@@ -8,5 +8,5 @@ export const ItensDoCarrinho = styled.div`
 `
 
 export const EspacoEntreItens = styled.div`
-    width: 30px;
+    width: 3%;
 `

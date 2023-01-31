@@ -8,10 +8,10 @@ export default function Conteudo({
     produtos,
 }) {
 
-    const [itensNoCarrinho, SetItensNoCarrinho] = useState([])
+    const [itensNoCarrinho, setItensNoCarrinho] = useState([])
     const eventItensNoCarrinho = (itens) => {
         const novoCarrinho = [...itensNoCarrinho, itens]
-        SetItensNoCarrinho(novoCarrinho)
+        setItensNoCarrinho(novoCarrinho)
     }
     
     
@@ -19,7 +19,7 @@ export default function Conteudo({
         <ConteudoDaPagina>
             <AsideFiltro />
             <Main produtos={produtos} eventItensNoCarrinho={eventItensNoCarrinho}/>
-            <AsideCarrinho itensNoCarrinho={itensNoCarrinho}/>
+            <AsideCarrinho itensNoCarrinho={itensNoCarrinho} setItensNoCarrinho={setItensNoCarrinho}/>
         </ConteudoDaPagina>
     )
 }

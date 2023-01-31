@@ -9,6 +9,7 @@ export default function Main({
     const renderizarProdutos = () => {
         return produtos.map((produto) => {
             return <Card 
+            id = {produto.id}
             name={produto.name} 
             value={produto.value.toFixed(2).replace(".", ",")} 
             img={produto.img}

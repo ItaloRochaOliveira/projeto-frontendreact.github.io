@@ -13,12 +13,18 @@ export default function Conteudo({
         const novoCarrinho = [...itensNoCarrinho, itens]
         setItensNoCarrinho(novoCarrinho)
     }
-    
+
+    const [buscarNome, setBuscarNome] = useState("")
+    const [ordenarItens, setOrdenarItens] = useState("")
     
     return(
         <ConteudoDaPagina>
-            <AsideFiltro />
-            <Main produtos={produtos} eventItensNoCarrinho={eventItensNoCarrinho}/>
+            <AsideFiltro buscarNome={buscarNome} setBuscarNome={setBuscarNome}/>
+            <Main 
+            produtos={produtos} eventItensNoCarrinho={eventItensNoCarrinho}
+            ordenarItens={ordenarItens} setOrdenarItens={setOrdenarItens}
+            buscarNome={buscarNome}
+            />
             <AsideCarrinho itensNoCarrinho={itensNoCarrinho} setItensNoCarrinho={setItensNoCarrinho}/>
         </ConteudoDaPagina>
     )

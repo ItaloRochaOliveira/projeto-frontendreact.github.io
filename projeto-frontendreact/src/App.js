@@ -29,13 +29,13 @@ const ContainerGeral = styled.div`
 const produtos = [
   {
     id: 0,
-    name: "nave acustica",
+    name: "Nave acustica",
     value: 70.10,
     img: naveAcustica
   },
   {
     id: 1,
-    name: "kit Sistema Solar",
+    name: "Kit Sistema Solar",
     value: 89.99,
     img: kitSistemaSolar
   },
@@ -47,7 +47,7 @@ const produtos = [
   },
   {
     id: 3,
-    name: "briquedo de matematica com tematica astronauta",
+    name: "Briquedo de matematica com tematica astronauta",
     value: 267,
     img: espacoComMatematica 
   },

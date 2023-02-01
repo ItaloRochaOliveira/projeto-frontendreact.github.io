@@ -1,7 +1,10 @@
 import React from "react";
 import { ContainerFiltro, EspacoEntreOsItens } from "./style";
 
-export default function AsideFiltro() {
+export default function AsideFiltro({
+    buscarNome,
+    setBuscarNome,
+}) {
     return(
         <ContainerFiltro>
             <h3>Filtros</h3>
@@ -10,7 +13,7 @@ export default function AsideFiltro() {
                 <label>
                     valor mínimo:
                     <br />
-                    <input></input>
+                    <input />
                 </label> 
             </EspacoEntreOsItens>
 
@@ -30,7 +33,7 @@ export default function AsideFiltro() {
                 <label>
                     buscar por nome:
                     <br />
-                    <input></input>
+                    <input value={buscarNome} onChange={(e)=> setBuscarNome(e.target.value)}/>
                 </label>
             </EspacoEntreOsItens>
         </ContainerFiltro>

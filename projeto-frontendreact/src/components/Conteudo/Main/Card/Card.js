@@ -1,4 +1,5 @@
 import React from "react";
+import { ItensDoCarrinho } from "../../AsideCarrinho/RemoverOuComprar/style";
 import { BotaoDoCard, CardBox, EspacoEntreItens, ImageCard, NomeDoProduto } from "./style";
 
 export default function Card({
@@ -6,7 +7,9 @@ export default function Card({
     name,
     value,
     img,
+    quantidade,
 
+    itensNoCarrinho,
     eventItensNoCarrinho,
 }) {
     return(
@@ -22,6 +25,8 @@ export default function Card({
                 id: id,
                 name: name,
                 value: value,
+                img: img,
+                quantidade: quantidade,
             })}}>Adicionar ao carrinho</BotaoDoCard>
             <EspacoEntreItens />
         </CardBox>

@@ -2,6 +2,12 @@ import React from "react";
 import { ContainerFiltro, EspacoEntreOsItens } from "./style";
 
 export default function AsideFiltro({
+    valorMinimo,
+    setValorMinimo,
+
+    valorMaximo,
+    setValorMaximo,
+
     buscarNome,
     setBuscarNome,
 }) {
@@ -13,7 +19,7 @@ export default function AsideFiltro({
                 <label>
                     valor mínimo:
                     <br />
-                    <input />
+                    <input value={valorMinimo} onChange={(e) => setValorMinimo(e.target.value)}/>
                 </label> 
             </EspacoEntreOsItens>
 
@@ -23,7 +29,7 @@ export default function AsideFiltro({
                 <label>
                     valor máximo:
                     <br />
-                    <input></input>
+                    <input value={valorMaximo} onChange={(e) => setValorMaximo(e.target.value)}/>
                 </label>
             </EspacoEntreOsItens>
 

@@ -9,9 +9,8 @@ export default function AsideCarrinho({
     let soma = 0
 
     const removerDoCarrinho = (valor) => {
-        console.log("valor", valor)
         const listaFiltrada = itensNoCarrinho.filter((item) => {
-            return valor !== item.id
+            return valor !== item.id ? item.quantidade-1 : item.quantidade
         })
         setItensNoCarrinho(listaFiltrada)
     }

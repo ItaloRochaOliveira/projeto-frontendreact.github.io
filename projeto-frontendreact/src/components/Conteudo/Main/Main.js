@@ -1,4 +1,5 @@
 import React from "react";
+import { ItensDoCarrinho } from "../AsideCarrinho/RemoverOuComprar/style";
 import Card from "./Card/Card"
 import { PrimeiraMain, PrimeiroArticleMain, SegundoArticleMain } from "./style";
 
@@ -6,13 +7,31 @@ export default function Main({
     produtos,
     eventItensNoCarrinho,
 
+    itensNoCarrinho,
+
     ordenarItens,
     setOrdenarItens,
 
+    valorMinimo,
+    valorMaximo,
     buscarNome,
 }) {
     const renderizarProdutos = () => {
         return produtos
+            .filter((produto) => {
+                if(produto.value > valorMinimo){
+                    return produto
+                } else if(!valorMinimo){
+                    return produto
+                }
+            })
+            .filter((produto) => {
+                if(produto.value < valorMaximo){
+                    return produto
+                } else if(!valorMaximo){
+                    return produto
+                }
+            })
             .filter((produto) => {
                 if(buscarNome && produto.name.toLowerCase().includes(buscarNome.toLowerCase())){
                     return produto
@@ -22,12 +41,12 @@ export default function Main({
             })
             .sort((a, b) => {
                 const produtoAtual = a.name
-                const produtoTrocar = b.name
+                const produtoProximo = b.name
 
                 if(ordenarItens === "Crescente"){
-                    return produtoAtual > produtoTrocar ? 1 : -1
+                    return produtoAtual > produtoProximo ? 1 : -1
                 } else if (ordenarItens === "Decrescente"){
-                    return produtoAtual < produtoTrocar ? 1 : -1
+                    return produtoAtual < produtoProximo ? 1 : -1
                 }
             })
             .map((produto) => {
@@ -36,16 +55,19 @@ export default function Main({
             name={produto.name} 
             value={produto.value.toFixed(2).replace(".", ",")} 
             img={produto.img}
+            quantidade={produto.quantidade}
             
+            itensNoCarrinho = {itensNoCarrinho}
             eventItensNoCarrinho={eventItensNoCarrinho}
             />
         })
     }
+    const cardsTamanho = renderizarProdutos()
     return(
         <PrimeiraMain>
             <PrimeiroArticleMain>
                 <div>
-                    Quantidade de produtos: 0
+                    Quantidade de produtos: {cardsTamanho.length}
                 </div>
                 <div>
                     Ordenação: 
@@ -55,10 +77,13 @@ export default function Main({
                         <option>Decrescente</option>
                     </select>
                 </div>
+                <div>
+                    {itensNoCarrinho.length}
+                </div>
             </PrimeiroArticleMain>
 
             <SegundoArticleMain>
-                {renderizarProdutos()}
+                {cardsTamanho}
             </SegundoArticleMain>
         </PrimeiraMain>
     )

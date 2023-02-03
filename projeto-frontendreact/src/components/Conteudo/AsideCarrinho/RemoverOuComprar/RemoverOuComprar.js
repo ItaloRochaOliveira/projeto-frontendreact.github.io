@@ -7,7 +7,7 @@ export default function RemoverOuComprar({
 }) {
     return(
         <ItensDoCarrinho key={item.id}>
-            1x
+            {item.quantidade}
             <EspacoEntreItens />
 
             {item.name}

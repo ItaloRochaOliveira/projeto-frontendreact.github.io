@@ -31,37 +31,43 @@ const produtos = [
     id: 0,
     name: "Nave acustica",
     value: 70.10,
-    img: naveAcustica
+    img: naveAcustica,
+    quantidade: 0,
   },
   {
     id: 1,
     name: "Kit Sistema Solar",
     value: 89.99,
-    img: kitSistemaSolar
+    img: kitSistemaSolar,
+    quantidade: 0,
   },
   {
     id: 2,
     name: "Onibus espacial",
     value: 207,
-    img: onibusEspacial
+    img: onibusEspacial,
+    quantidade: 0,
   },
   {
     id: 3,
     name: "Briquedo de matematica com tematica astronauta",
     value: 267,
-    img: espacoComMatematica 
+    img: espacoComMatematica,
+    quantidade: 0,
   },
   {
     id: 4,
     name: "6 peças de coelhos astronautas",
     value: 65,
-    img: coelhoEspacial
+    img: coelhoEspacial,
+    quantidade: 0,
   },
   {
     id: 5,
     name: "Boneco astronauta com ornamento externo",
     value: 83,
-    img: brinquedoAstronauta
+    img: brinquedoAstronauta,
+    quantidade: 0,
   }
 ]
 

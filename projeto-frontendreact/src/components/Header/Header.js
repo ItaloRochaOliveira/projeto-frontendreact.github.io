@@ -4,7 +4,7 @@ import {Cabecalho, ListaHeader, EspacoEntreLi} from "./style"
 export default function Header() {
     return(
         <Cabecalho>
-            <h1>loja</h1>
+            <h1>Brinquedos espaciais</h1>
             <nav>
                 <ListaHeader >
                     <EspacoEntreLi>Home</EspacoEntreLi>

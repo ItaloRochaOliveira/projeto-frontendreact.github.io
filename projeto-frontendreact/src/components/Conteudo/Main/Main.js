@@ -1,9 +1,10 @@
 import React from "react";
-import { ItensDoCarrinho } from "../AsideCarrinho/RemoverOuComprar/style";
 import Card from "./Card/Card"
 import { PrimeiraMain, PrimeiroArticleMain, SegundoArticleMain } from "./style";
 
 export default function Main({
+    setTrocarTela,
+
     produtos,
     eventItensNoCarrinho,
 
@@ -11,11 +12,14 @@ export default function Main({
 
     ordenarItens,
     setOrdenarItens,
+    quantidade,
 
     valorMinimo,
     valorMaximo,
     buscarNome,
 }) {
+    
+
     const renderizarProdutos = () => {
         return produtos
             .filter((produto) => {
@@ -78,7 +82,8 @@ export default function Main({
                     </select>
                 </div>
                 <div>
-                    {itensNoCarrinho.length}
+                    {quantidade}
+                    <button onClick={() => setTrocarTela("carrinho")}>/</button>
                 </div>
             </PrimeiroArticleMain>
 

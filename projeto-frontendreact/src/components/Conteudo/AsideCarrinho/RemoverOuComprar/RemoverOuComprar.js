@@ -1,20 +1,19 @@
 import React from "react";
-import { ItensDoCarrinho, EspacoEntreItens } from "./style";
+import { ItensDoCarrinho, EspacoEntreItens, NomeDoProduto, CardBox, ImageCard } from "./style";
 
 export default function RemoverOuComprar({
     item,
     removerDoCarrinho,
 }) {
     return(
-        <ItensDoCarrinho key={item.id}>
-            {item.quantidade}
-            <EspacoEntreItens />
+        <CardBox key={item.id}>
+            
 
-            {item.name}
+            <ImageCard src={item.img}/>
+            {item.quantidade}x
+            <NomeDoProduto>{item.name}</NomeDoProduto>
 
-            <EspacoEntreItens />
-
-            <button onClick={() => removerDoCarrinho(item.id)}>remover</button>
-        </ItensDoCarrinho>
+            <button onClick={() => removerDoCarrinho(item)}>remover</button>
+        </CardBox>
     )
 }

@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import RemoverOuComprar from "./RemoverOuComprar/RemoverOuComprar";
 import { ContainerCarrinho, CabecalhoFlex, ItensFlex} from "./style";
 
-export default function AsideCarrinho({
+export default function Carrinho({
     setTrocarTela,
 
     itensNoCarrinho,
@@ -12,10 +12,24 @@ export default function AsideCarrinho({
     setQuantidade,
 }) {
 
-    const soma = () => {
-        return itensNoCarrinho.reduce((acumulador, item) => {
-        return acumulador + Number(item.value.replace(",", ".")), 0
-    })}
+    console.log(itensNoCarrinho)
+    const [soma, setSoma] = useState(0)
+    useEffect(()=> {
+        //com for
+
+        // let guardar = 0
+        //     for(let item of itensNoCarrinho){
+        //         guardar += item.value * item.quantidade
+        //     }
+        //     console.log(guardar)
+        //     setSoma(guardar)
+
+        //com reduce
+        const valor = itensNoCarrinho.reduce((acumulador, item) =>  acumulador + item.value * item.quantidade, 0)
+        console.log(valor)
+        setSoma(valor)  
+    }, [itensNoCarrinho])
+    
 
     const removerDoCarrinho = (itens) => {
         setQuantidade(quantidade - 1)
@@ -44,7 +58,7 @@ export default function AsideCarrinho({
 
     const imprimirItensNoCarrinho = () => {
         return itensNoCarrinho.map((item) => {
-            return <RemoverOuComprar item={item} removerDoCarrinho={removerDoCarrinho}/>
+            return <RemoverOuComprar key={item.id} item={item} removerDoCarrinho={removerDoCarrinho}/>
         })
     }
 
@@ -54,7 +68,10 @@ export default function AsideCarrinho({
             <CabecalhoFlex>
                 <h3>Carrinho:</h3>
 
-                <p>R$ {soma()}</p>
+                <p>{soma.toLocaleString("pt-br", {
+                  style: "currency",
+                  currency: "BRL",
+                })}</p>
             </CabecalhoFlex>
 
             <ItensFlex>

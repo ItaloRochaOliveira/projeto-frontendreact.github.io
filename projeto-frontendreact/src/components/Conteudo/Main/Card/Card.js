@@ -18,7 +18,10 @@ export default function Card({
 
             <EspacoEntreItens />
             <NomeDoProduto>{name}</NomeDoProduto>
-            <NomeDoProduto>R$ {value}</NomeDoProduto>
+            <NomeDoProduto>{value.toLocaleString("pt-br", {
+                  style: "currency",
+                  currency: "BRL",
+                })}</NomeDoProduto>
             <EspacoEntreItens />
 
             <BotaoDoCard onClick={() => {eventItensNoCarrinho({

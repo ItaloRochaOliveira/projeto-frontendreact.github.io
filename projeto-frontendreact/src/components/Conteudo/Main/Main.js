@@ -57,7 +57,7 @@ export default function Main({
             return <Card 
             id = {produto.id}
             name={produto.name} 
-            value={produto.value.toFixed(2).replace(".", ",")} 
+            value={produto.value} 
             img={produto.img}
             quantidade={produto.quantidade}
             

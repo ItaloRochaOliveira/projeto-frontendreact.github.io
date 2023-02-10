@@ -28,7 +28,6 @@ const ContainerGeral = styled.div`
   max-width: 100vw;
   
 `
-
 const produtos = [
   {
     id: 0,

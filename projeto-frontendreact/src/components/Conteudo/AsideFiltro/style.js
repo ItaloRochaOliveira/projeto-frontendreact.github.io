@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerFiltro = styled.aside`
-    min-width: 15%;
+    min-width: 20%;
     padding: 30px;
     border: 1px solid black;
 `

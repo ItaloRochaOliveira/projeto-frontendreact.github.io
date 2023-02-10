@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useEffect, useState} from "react";
 import AsideFiltro from "./AsideFiltro/AsideFiltro";
 import Main from "./Main/Main"
 import Carrinho from "./AsideCarrinho/Carrinho";
@@ -6,7 +6,10 @@ import { ConteudoDaPagina } from "./style";
 
 export default function Conteudo({
     produtos,
+    iconeCarrinho,
 }) {
+    
+
     const [trocarTela, setTrocarTela] = useState("home")
 
     const [itensNoCarrinho, setItensNoCarrinho] = useState([])
@@ -38,6 +41,22 @@ export default function Conteudo({
     const [valorMinimo, setValorMinimo] = useState("")
     const [valorMaximo, setValorMaximo] = useState("")
     const [buscarNome, setBuscarNome] = useState("")
+
+    useEffect(() => {
+        const carregarCarrinho = JSON.parse(localStorage.getItem("carrinho"))
+        const carregarQuantidade = JSON.parse(localStorage.getItem("quantidade"))
+        console.log(Number(carregarQuantidade))
+        if(carregarCarrinho){
+            setItensNoCarrinho(carregarCarrinho)
+            setQuantidade(carregarQuantidade)
+        }
+    },[])
+    useEffect(()=> {
+        if(itensNoCarrinho.length > 0){
+            localStorage.setItem("carrinho", JSON.stringify(itensNoCarrinho))
+            localStorage.setItem("quantidade", JSON.stringify(quantidade))
+        }
+    }, [itensNoCarrinho])
     
     if(trocarTela === "home"){
         return(
@@ -58,6 +77,8 @@ export default function Conteudo({
                 valorMinimo={valorMinimo}
                 valorMaximo={valorMaximo}
                 buscarNome={buscarNome}
+
+                iconeCarrinho={iconeCarrinho}
                 />
             </ConteudoDaPagina>
         )

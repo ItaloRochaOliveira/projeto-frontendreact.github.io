@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card/Card"
-import { BotaoDoIconeCarrinho, ImagemDoCarrinho, PrimeiraMain, PrimeiroArticleMain, Quantidade, SegundoArticleMain } from "./style";
+import { BotaoDoIconeCarrinho, EstiloDoSelect, ImagemDoCarrinho, PrimeiraMain, PrimeiroArticleMain, Quantidade, SegundoArticleMain } from "./style";
 
 export default function Main({
     setTrocarTela,
@@ -23,14 +23,14 @@ export default function Main({
     const renderizarProdutos = () => {
         return produtos
             .filter((produto) => {
-                if(produto.value > valorMinimo){
+                if(produto.value > valorMinimo.replace(",",".")){
                     return produto
                 } else if(!valorMinimo){
                     return produto
                 }
             })
             .filter((produto) => {
-                if(produto.value < valorMaximo){
+                if(produto.value < valorMaximo.replace(",",".")){
                     return produto
                 } else if(!valorMaximo){
                     return produto
@@ -78,11 +78,11 @@ export default function Main({
                 <div>
                     Ordenação: 
 
-                    <select value={ordenarItens} onChange={(e) => {setOrdenarItens(e.target.value)}}>
-                    <option>Ordenar</option>
+                    <EstiloDoSelect value={ordenarItens} onChange={(e) => {setOrdenarItens(e.target.value)}}>
+                        <option>Ordenar</option>
                         <option>Crescente</option>
                         <option>Decrescente</option>
-                    </select>
+                    </EstiloDoSelect>
                 </div>
                 <div>
                     

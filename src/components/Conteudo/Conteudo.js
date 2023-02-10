@@ -2,7 +2,7 @@ import React, { useEffect, useState} from "react";
 import AsideFiltro from "./AsideFiltro/AsideFiltro";
 import Main from "./Main/Main"
 import Carrinho from "./AsideCarrinho/Carrinho";
-import { ConteudoDaPagina } from "./style";
+import {ConteudoDaPagina, AindaNaoDisponivel, BotaoVoltar } from "./style";
 
 export default function Conteudo({
     produtos,
@@ -32,7 +32,7 @@ export default function Conteudo({
             const item = {...novoItem, quantidade: 1}
             const novoCarrinho = [...itensNoCarrinho, item]
             setItensNoCarrinho(novoCarrinho)
-        }         
+        }        
     }
 
     const [ordenarItens, setOrdenarItens] = useState("")
@@ -82,7 +82,7 @@ export default function Conteudo({
                 />
             </ConteudoDaPagina>
         )
-    } else {
+    } else if(trocarTela === "carrinho"){
         return(
             <ConteudoDaPagina>
                 <Carrinho 
@@ -94,6 +94,19 @@ export default function Conteudo({
                 quantidade={quantidade}
                 setQuantidade={setQuantidade}
                 />
+            </ConteudoDaPagina>
+        )
+    } else if("comprar"){
+        return(
+            <ConteudoDaPagina>
+                <div>
+                    <BotaoVoltar onClick={()=> setTrocarTela("carrinho")}>voltar</BotaoVoltar>
+                    <div>
+                        <AindaNaoDisponivel>Parte do pagamento ainda não disponivel</AindaNaoDisponivel>
+                        Deseja voltar? <br />
+                        <BotaoVoltar onClick={()=> setTrocarTela("carrinho")}>voltar</BotaoVoltar>
+                    </div>
+                </div>
             </ConteudoDaPagina>
         )
     }

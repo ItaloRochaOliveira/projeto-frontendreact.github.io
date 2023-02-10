@@ -13,7 +13,6 @@ export const ContainerFiltro = styled.aside`
     margin: 1%;
     padding: 30px;
 
-    border: 1px solid #0b1320;
     border-radius: 25px;
 `
 
@@ -21,20 +20,38 @@ export const EspacoEntreOsItens = styled.div`
     padding-top: 10px;
 `
 
-export const LabelDoAsidePesquisa = styled.label`
+export const InputPesquisa = styled.div`
     display: flex;
     align-items: center;
-    background: white;
-    color: black;
+    background: #0b1350;
+    border-radius: 10px;
+
+    color: white;
+    font-family: arial;
     width: 100%;
-    
+    height: 30px;
+`
+export const Lupa = styled.img`
+    width: 20px;
+    height: 20px;
+`
+
+export const TituloFiltro = styled.h3`
+    margin-top: 10px;
 `
 
 export const InputDoAside = styled.input`
     min-width: 100%;
     min-height: 30px;
     text-align: center;
-    
+    margin: 10px 0;
+
+    background: #0b1350;
+
+    border: none;
     border-radius: 10px;
-    border:none;
+
+    :focus{
+        outline: 0;
+    }
 `

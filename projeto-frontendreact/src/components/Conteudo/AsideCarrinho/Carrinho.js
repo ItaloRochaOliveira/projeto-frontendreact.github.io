@@ -11,8 +11,6 @@ export default function Carrinho({
     quantidade,
     setQuantidade,
 }) {
-
-    console.log(itensNoCarrinho)
     const [soma, setSoma] = useState(0)
     useEffect(()=> {
         //com for
@@ -33,6 +31,7 @@ export default function Carrinho({
 
     const removerDoCarrinho = (itens) => {
         setQuantidade(quantidade - 1)
+        
         const verficacao = itensNoCarrinho.find((item)=>{
             return itens.id === item.id
         })
@@ -64,7 +63,7 @@ export default function Carrinho({
 
     return(
         <ContainerCarrinho>
-            <button onClick={()=> setTrocarTela("home")}>/</button>
+            <button onClick={()=> setTrocarTela("home")}>voltar</button>
             <CabecalhoFlex>
                 <h3>Carrinho:</h3>
 

@@ -11,6 +11,8 @@ import espacoComMatematica from "./img/espaco-com-matematica.jpg"
 import coelhoEspacial from "./img/coelho-espacial.jpg"
 import brinquedoAstronauta from "./img/brinquedo-astronauta.jpg"
 
+import iconeCarrinho from "./img/icone-carrinho.png"
+
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -75,7 +77,7 @@ function App() {
   return (
     <ContainerGeral>
       <Header />
-      <Conteudo produtos={produtos}/>
+      <Conteudo produtos={produtos} iconeCarrinho={iconeCarrinho}/>
       <Footer />
 
       <GlobalStyle />

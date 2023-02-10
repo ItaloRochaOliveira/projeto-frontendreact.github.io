@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card/Card"
-import { PrimeiraMain, PrimeiroArticleMain, SegundoArticleMain } from "./style";
+import { BotaoDoIconeCarrinho, ImagemDoCarrinho, PrimeiraMain, PrimeiroArticleMain, Quantidade, SegundoArticleMain } from "./style";
 
 export default function Main({
     setTrocarTela,
@@ -17,9 +17,9 @@ export default function Main({
     valorMinimo,
     valorMaximo,
     buscarNome,
-}) {
-    
 
+    iconeCarrinho,
+}) {
     const renderizarProdutos = () => {
         return produtos
             .filter((produto) => {
@@ -51,6 +51,8 @@ export default function Main({
                     return produtoAtual > produtoProximo ? 1 : -1
                 } else if (ordenarItens === "Decrescente"){
                     return produtoAtual < produtoProximo ? 1 : -1
+                } else {
+                    return a.value - b.value
                 }
             })
             .map((produto) => {
@@ -77,13 +79,17 @@ export default function Main({
                     Ordenação: 
 
                     <select value={ordenarItens} onChange={(e) => {setOrdenarItens(e.target.value)}}>
+                    <option>Ordenar</option>
                         <option>Crescente</option>
                         <option>Decrescente</option>
                     </select>
                 </div>
                 <div>
-                    {quantidade}
-                    <button onClick={() => setTrocarTela("carrinho")}>/</button>
+                    
+                    <BotaoDoIconeCarrinho onClick={() => setTrocarTela("carrinho")}>
+                        <ImagemDoCarrinho src={iconeCarrinho}/>
+                        <Quantidade>{quantidade}</Quantidade>
+                    </BotaoDoIconeCarrinho>
                 </div>
             </PrimeiroArticleMain>
 

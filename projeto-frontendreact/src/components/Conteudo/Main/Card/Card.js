@@ -14,7 +14,7 @@ export default function Card({
 }) {
     return(
         <CardBox>
-            <ImageCard src={img} />
+            <ImageCard src={img} alt={name}/>
 
             <EspacoEntreItens />
             <NomeDoProduto>{name}</NomeDoProduto>

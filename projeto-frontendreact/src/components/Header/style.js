@@ -7,8 +7,10 @@ export const Cabecalho = styled.header `
 
     padding: 10px;
 
-    background: gray;
+    background: #0b1312;
     color: white;
+    
+    font-family: space;
 
 `
 

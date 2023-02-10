@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerFiltro, EspacoEntreOsItens } from "./style";
+import { ContainerFiltro, EspacoEntreOsItens, InputDoAside, LabelDoAside, LabelDoAsidePesquisa } from "./style";
 
 export default function AsideFiltro({
     valorMinimo,
@@ -12,36 +12,30 @@ export default function AsideFiltro({
     setBuscarNome,
 }) {
     return(
+        
         <ContainerFiltro>
+            <EspacoEntreOsItens>
+                <LabelDoAsidePesquisa>
+                    0
+                    <InputDoAside placeholder="Pesquisar produtos" value={buscarNome} onChange={(e)=> setBuscarNome(e.target.value)}/>
+                    x
+                </LabelDoAsidePesquisa>
+            </EspacoEntreOsItens>
+            
             <h3>Filtros</h3>
 
             <EspacoEntreOsItens>
                 <label>
-                    valor mínimo:
-                    <br />
-                    <input value={valorMinimo} onChange={(e) => setValorMinimo(e.target.value)}/>
+                    <InputDoAside placeholder="Preço minimo" value={valorMinimo} onChange={(e) => setValorMinimo(e.target.value)}/>
                 </label> 
             </EspacoEntreOsItens>
 
-            <br />
-
             <EspacoEntreOsItens>
                 <label>
-                    valor máximo:
-                    <br />
-                    <input value={valorMaximo} onChange={(e) => setValorMaximo(e.target.value)}/>
+                    <InputDoAside placeholder="Preço máximo" value={valorMaximo} onChange={(e) => setValorMaximo(e.target.value)}/>
                 </label>
             </EspacoEntreOsItens>
 
-            <br />
-
-            <EspacoEntreOsItens>
-                <label>
-                    buscar por nome:
-                    <br />
-                    <input value={buscarNome} onChange={(e)=> setBuscarNome(e.target.value)}/>
-                </label>
-            </EspacoEntreOsItens>
         </ContainerFiltro>
     )
 }

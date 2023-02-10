@@ -26,6 +26,7 @@ const ContainerGeral = styled.div`
   flex-direction: column;
   min-height: 100vh;
   max-width: 100vw;
+  
 `
 
 const produtos = [

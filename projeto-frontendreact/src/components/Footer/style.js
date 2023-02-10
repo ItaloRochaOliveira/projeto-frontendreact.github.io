@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Rodape = styled.footer`
-    background: gray;
+    background: #0b1312;
     color: white
 `
 

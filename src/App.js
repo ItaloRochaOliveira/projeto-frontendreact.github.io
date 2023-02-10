@@ -28,7 +28,7 @@ const ContainerGeral = styled.div`
   max-width: 100vw;
   
 `
-
+//comentadno
 const produtos = [
   {
     id: 0,

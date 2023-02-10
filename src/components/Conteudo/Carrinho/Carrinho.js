@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import RemoverOuComprar from "./RemoverOuComprar/RemoverOuComprar";
-import { ContainerCarrinho, CabecalhoFlex, ItensFlex} from "./style";
+import { ContainerCarrinho, Voltar, ImagemVoltar, BotaoVoltar, TituloDoCarrinho, CabecalhoFlex, ItensFlex, Pagar, Cards, ContainerPagar, Comprar, BotaoComprar} from "./style";
+import botaoVoltar from "../../../img/botao-voltar.png"
 
 export default function Carrinho({
     setTrocarTela,
 
     itensNoCarrinho,
     setItensNoCarrinho,
-
+    
     quantidade,
     setQuantidade,
 }) {
@@ -63,19 +64,36 @@ export default function Carrinho({
 
     return(
         <ContainerCarrinho>
-            <button onClick={()=> setTrocarTela("home")}>voltar</button>
-            <CabecalhoFlex>
-                <h3>Carrinho:</h3>
+            <Voltar>
+                <ImagemVoltar src={botaoVoltar}/>    
+                    
+                <BotaoVoltar onClick={()=> setTrocarTela("home")}>voltar</BotaoVoltar>
+            </Voltar>
 
-                <p>{soma.toLocaleString("pt-br", {
-                  style: "currency",
-                  currency: "BRL",
-                })}</p>
+            <CabecalhoFlex>
+                <TituloDoCarrinho>Carrinho:</TituloDoCarrinho>
             </CabecalhoFlex>
 
-            <ItensFlex>
-                {imprimirItensNoCarrinho()}
-            </ItensFlex>
+            <Pagar>
+                <Cards>
+                    <ItensFlex>
+                    {imprimirItensNoCarrinho()}
+                    </ItensFlex>    
+                </Cards>
+               
+               <ContainerPagar>
+                    <Comprar>
+                        Total:
+                        <p>{soma.toLocaleString("pt-br", {
+                        style: "currency",
+                        currency: "BRL",
+                        })}</p>
+                    </Comprar>
+                    
+                    <BotaoComprar onClick={() => setTrocarTela("comprar")}>Comprar</BotaoComprar>
+                
+               </ContainerPagar>
+            </Pagar>
 
             
         </ContainerCarrinho>

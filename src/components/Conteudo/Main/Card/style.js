@@ -8,9 +8,11 @@ export const CardBox = styled.div`
     align-items: center;
 
     min-height: 300px;
-    min-width: 200px;
+    min-width: 250px;
     width: 30%;
     margin: 10px;
+
+    background: #0b1320;
 
     border: 1px solid black;
     border-radius: 30px;
@@ -19,9 +21,13 @@ export const CardBox = styled.div`
 `
 
 export const ImageCard = styled.img`
-    max-width: 100%;
+    max-width: 50%;
     min-heigth: 50%;
     max-heigth: 60%;
+
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 190px blue;
 `
 
 export const EspacoEntreItens = styled.div`
@@ -37,10 +43,13 @@ export const BotaoDoCard = styled.button`
     position: absolute;
     bottom: 0;
 
+    height: 33px;
     margin: 10px;
     padding: 5px;
     border: 0.1px solid black;
-    border-radius: 25px;
+    border-radius: 10px;
+
+    background: #f3f6fa;
 
     :hover{
         cursor: pointer;

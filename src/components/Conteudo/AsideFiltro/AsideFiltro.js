@@ -1,10 +1,11 @@
 import React from "react";
-import { ContainerFiltro, EspacoEntreOsItens, InputDoAside, LabelDoAside, LabelDoAsidePesquisa } from "./style";
+import { ContainerFiltro, EspacoEntreOsItens, InputDoAside, InputPesquisa, Lupa, TituloFiltro } from "./style";
+import lupa from "../../../img/lupa.png"
 
 export default function AsideFiltro({
     valorMinimo,
     setValorMinimo,
-
+    
     valorMaximo,
     setValorMaximo,
 
@@ -15,14 +16,18 @@ export default function AsideFiltro({
         
         <ContainerFiltro>
             <EspacoEntreOsItens>
-                <LabelDoAsidePesquisa>
-                    0
-                    <InputDoAside placeholder="Pesquisar produtos" value={buscarNome} onChange={(e)=> setBuscarNome(e.target.value)}/>
+                <InputPesquisa>
+                    <Lupa src={lupa} />
+                    <label>
+                        
+                        <InputDoAside placeholder="Pesquisar produtos" value={buscarNome} onChange={(e)=> setBuscarNome(e.target.value)}/>
+                        
+                    </label>
                     x
-                </LabelDoAsidePesquisa>
+                </InputPesquisa>
             </EspacoEntreOsItens>
             
-            <h3>Filtros</h3>
+            <TituloFiltro>Filtros</TituloFiltro>
 
             <EspacoEntreOsItens>
                 <label>

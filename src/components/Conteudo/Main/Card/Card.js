@@ -1,5 +1,4 @@
 import React from "react";
-import { ItensDoCarrinho } from "../../AsideCarrinho/RemoverOuComprar/style";
 import { BotaoDoCard, CardBox, EspacoEntreItens, ImageCard, NomeDoProduto } from "./style";
 
 export default function Card({
@@ -9,7 +8,6 @@ export default function Card({
     img,
     quantidade,
 
-    itensNoCarrinho,
     eventItensNoCarrinho,
 }) {
     return(
@@ -18,10 +16,10 @@ export default function Card({
 
             <EspacoEntreItens />
             <NomeDoProduto>{name}</NomeDoProduto>
-            <NomeDoProduto>{value.toLocaleString("pt-br", {
+            <NomeDoProduto><h3>{value.toLocaleString("pt-br", {
                   style: "currency",
                   currency: "BRL",
-                })}</NomeDoProduto>
+                })}</h3></NomeDoProduto>
             <EspacoEntreItens />
 
             <BotaoDoCard onClick={() => {eventItensNoCarrinho({

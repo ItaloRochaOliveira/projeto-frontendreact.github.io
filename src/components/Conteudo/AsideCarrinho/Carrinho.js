@@ -10,7 +10,7 @@ export default function Carrinho({
     setItensNoCarrinho,
     
     quantidade,
-    setQuantidade,
+    setQuantidade
 }) {
     const [soma, setSoma] = useState(0)
     useEffect(()=> {

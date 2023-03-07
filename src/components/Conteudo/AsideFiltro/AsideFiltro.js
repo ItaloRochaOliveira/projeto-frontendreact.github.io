@@ -10,7 +10,7 @@ export default function AsideFiltro({
     setValorMaximo,
 
     buscarNome,
-    setBuscarNome,
+    setBuscarNome
 }) {
     return(
         

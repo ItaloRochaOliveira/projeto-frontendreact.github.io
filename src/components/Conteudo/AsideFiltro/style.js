@@ -47,6 +47,7 @@ export const InputDoAside = styled.input`
     margin: 10px 0;
 
     background: #0b1350;
+    color: white;
 
     border: none;
     border-radius: 10px;

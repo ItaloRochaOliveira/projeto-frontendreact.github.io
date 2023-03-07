@@ -65,7 +65,7 @@ export default function Carrinho({
     return(
         <ContainerCarrinho>
             <Voltar>
-                <ImagemVoltar src={botaoVoltar}/>    
+                <ImagemVoltar src={botaoVoltar} onClick={()=> setTrocarTela("home")}/>    
                     
                 <BotaoVoltar onClick={()=> setTrocarTela("home")}>voltar</BotaoVoltar>
             </Voltar>

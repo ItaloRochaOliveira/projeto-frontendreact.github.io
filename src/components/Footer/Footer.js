@@ -17,7 +17,7 @@ export default function Footer() {
             <h2>Contato:</h2>
             <LinkSemDecoracao href="https://github.com/ItaloRochaOliveira">Gitgub</LinkSemDecoracao> <br />
             <LinkSemDecoracao href="mailto:italo.rocha.de.oliveira@gmail.com">Gmail</LinkSemDecoracao> <br />
-            <LinkSemDecoracao href="https://www.linkedin.com/in/italo-rocha-16a8671b6/">Linkedin</LinkSemDecoracao>
+            <LinkSemDecoracao href="https://www.linkedin.com/in/italorochaoliveira/">Linkedin</LinkSemDecoracao>
           </ArticlesInfoPessoal>
         </InfoPessoal>
 

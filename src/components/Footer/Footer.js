@@ -3,10 +3,10 @@ import {Rodape, InfoPessoal, ArticlesInfoPessoal, LinkSemDecoracao ,CentralizarT
 
 export default function Footer() {
     return(
-      <Rodape>
+      <Rodape id="footer">
         <InfoPessoal>
           <ArticlesInfoPessoal>
-            <h2>Sobre:</h2>
+            <h2 id="about">Sobre:</h2>
             Uma loja com carrinho para fazer pedidos.
           </ArticlesInfoPessoal>
           <ArticlesInfoPessoal>

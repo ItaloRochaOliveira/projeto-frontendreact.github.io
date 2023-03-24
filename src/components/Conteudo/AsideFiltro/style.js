@@ -28,8 +28,9 @@ export const InputPesquisa = styled.div`
 
     color: white;
     font-family: arial;
-    width: 100%;
+    min-width: 100%;
     height: 30px;
+    padding: 10px;
 `
 export const Lupa = styled.img`
     width: 20px;
@@ -55,4 +56,8 @@ export const InputDoAside = styled.input`
     :focus{
         outline: 0;
     }
+`
+
+export const X = styled.span`
+    cursor: pointer
 `

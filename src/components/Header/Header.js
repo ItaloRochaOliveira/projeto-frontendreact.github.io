@@ -1,17 +1,13 @@
 import React from "react";
-import {Cabecalho, ListaHeader, EspacoEntreLi} from "./style"
+import {Cabecalho} from "./style"
+import Burger from "./styled-hamburguer/Nav";
+
 
 export default function Header() {
     return(
         <Cabecalho>
             <h1>Brinquedos espaciais</h1>
-            <nav>
-                <ListaHeader >
-                    <EspacoEntreLi>Home</EspacoEntreLi>
-                    <EspacoEntreLi>Sobre</EspacoEntreLi>
-                    <EspacoEntreLi>Contato</EspacoEntreLi>
-                </ListaHeader>
-            </nav>
+            <Burger />
         </Cabecalho>
     )
 }

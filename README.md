@@ -51,7 +51,7 @@ styled-component
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Styled Component](https://img.shields.io/badge/styled_component-white?style=for-the-badge&logo=styled-components&logoColor=pink)
+![Styled Component](https://img.shields.io/badge/styled_component-gray?style=for-the-badge&logo=styled-components&logoColor=pink)
 ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 
 ## 📫 Contato

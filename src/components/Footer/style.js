@@ -7,16 +7,27 @@ export const Rodape = styled.footer`
 
 export const InfoPessoal = styled.main`
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 
-    height: 150px;
+    height: 20%;
     margin-left: 10%;
+
+    @media (max-width: 600px){
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        margin: 4%;
+        padding: 4%;
+    }
 `
 
 export const ArticlesInfoPessoal = styled.article `
     width: 20%;
     margin: 1%;
+
+    @media (max-width: 600px){
+        width: 70%;
+    }
 `
 
 export const LinkSemDecoracao = styled.a`

@@ -12,18 +12,13 @@ export const Cabecalho = styled.header `
     
     font-family: space;
 
-`
+    position: sticky;
+    top: 0;
+    z-index: 3;
 
-export const ListaHeader = styled.ul`
-    display: flex;
-
-    list-style: none;
-`
-
-export const EspacoEntreLi = styled.li`
-    padding: 0 20px 0 20px;
-    :hover{
-        cursor: pointer;
-        background: #afa8a8;
+    a{
+        text-decoration: none;
+        color: white;
     }
+
 `

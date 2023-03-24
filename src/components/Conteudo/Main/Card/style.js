@@ -7,7 +7,7 @@ export const CardBox = styled.div`
     flex-direction: column;
     align-items: center;
 
-    min-height: 300px;
+    min-height: 350px;
     min-width: 250px;
     width: 30%;
     margin: 10px;

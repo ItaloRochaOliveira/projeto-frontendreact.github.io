@@ -64,10 +64,10 @@ export default function Carrinho({
 
     return(
         <ContainerCarrinho>
-            <Voltar>
-                <ImagemVoltar src={botaoVoltar} onClick={()=> setTrocarTela("home")}/>    
+            <Voltar onClick={()=> setTrocarTela("home")}>
+                <ImagemVoltar src={botaoVoltar}/>    
                     
-                <BotaoVoltar onClick={()=> setTrocarTela("home")}>voltar</BotaoVoltar>
+                <BotaoVoltar>voltar</BotaoVoltar>
             </Voltar>
 
             <CabecalhoFlex>

@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerFiltro, EspacoEntreOsItens, InputDoAside, InputPesquisa, Lupa, TituloFiltro } from "./style";
+import { ContainerFiltro, EspacoEntreOsItens, InputDoAside, InputPesquisa, Lupa, TituloFiltro, X } from "./style";
 import lupa from "../../../img/lupa.png"
 
 export default function AsideFiltro({
@@ -17,13 +17,13 @@ export default function AsideFiltro({
         <ContainerFiltro>
             <EspacoEntreOsItens>
                 <InputPesquisa>
-                    <Lupa src={lupa} />
+                    <Lupa src={lupa} onChange={(e)=> setBuscarNome(e.target.value)}/>
                     <label>
                         
                         <InputDoAside placeholder="Pesquisar produtos" value={buscarNome} onChange={(e)=> setBuscarNome(e.target.value)}/>
                         
                     </label>
-                    x
+                    <X onClick={() => setBuscarNome("")} >x</X>
                 </InputPesquisa>
             </EspacoEntreOsItens>
             

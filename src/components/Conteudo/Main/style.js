@@ -3,14 +3,21 @@ import styled from "styled-components";
 export const PrimeiraMain = styled.main`
     width: 70%;
     min-height: 70vh;
+    @media (mas-width: 600px){
+        width: 100%;
+    }
 `
 
 export const PrimeiroArticleMain = styled.article`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 10px;
+    margin-top: 10px;
 
     width: 90%;
+    div{
+        margin-top: 10px;
+    }
 `
 
 export const EstiloDoSelect = styled.select`

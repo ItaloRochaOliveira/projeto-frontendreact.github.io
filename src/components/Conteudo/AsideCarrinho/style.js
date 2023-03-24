@@ -12,6 +12,8 @@ export const Voltar = styled.div`
 
 export const ImagemVoltar = styled.img`
     height: 40px;
+
+    cursor: pointer;
 `
 
 export const BotaoVoltar = styled.button`
@@ -41,13 +43,22 @@ export const ItensFlex = styled.div`
     display: flex;  
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 350px;
 `
 
 export const Pagar = styled.div`
     display: flex;
+
+    @media (max-width: 600px){
+        flex-direction: column;
+    }
+
 `
 export const Cards = styled.div`
     width: 80%
+    @media (max-width: 600px){
+        order: 1;
+    }
 `
 
 export const ContainerPagar = styled.div`
@@ -58,6 +69,11 @@ export const ContainerPagar = styled.div`
 
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 600px){
+        margin: 20px 0;
+        order: 2;
+    }
 `
 
 export const Comprar = styled.div`

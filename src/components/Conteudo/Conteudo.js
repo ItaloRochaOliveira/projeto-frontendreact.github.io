@@ -2,7 +2,9 @@ import React, { useEffect, useState} from "react";
 import AsideFiltro from "./AsideFiltro/AsideFiltro";
 import Main from "./Main/Main"
 import Carrinho from "./AsideCarrinho/Carrinho";
-import {ConteudoDaPagina, AindaNaoDisponivel, BotaoVoltar } from "./style";
+import {ConteudoDaPagina, AindaNaoDisponivel, BotaoVoltar, ImagemVoltar, Voltar } from "./style";
+import botaoVoltar from "../../img/botao-voltar.png"
+
 
 export default function Conteudo({
     produtos,
@@ -100,11 +102,21 @@ export default function Conteudo({
         return(
             <ConteudoDaPagina>
                 <div>
-                    <BotaoVoltar onClick={()=> setTrocarTela("carrinho")}>voltar</BotaoVoltar>
+                    
+                    <Voltar onClick={()=> setTrocarTela("carrinho")}>
+                        <ImagemVoltar src={botaoVoltar}/>    
+                            
+                        <BotaoVoltar >voltar</BotaoVoltar>
+                    </Voltar>
                     <div>
                         <AindaNaoDisponivel>Parte do pagamento ainda não disponivel</AindaNaoDisponivel>
                         Deseja voltar? <br />
-                        <BotaoVoltar onClick={()=> setTrocarTela("carrinho")}>voltar</BotaoVoltar>
+                            
+                        <Voltar onClick={()=> setTrocarTela("carrinho")}>
+                            <ImagemVoltar src={botaoVoltar}/>    
+                                
+                            <BotaoVoltar >voltar</BotaoVoltar>
+                        </Voltar>
                     </div>
                 </div>
             </ConteudoDaPagina>

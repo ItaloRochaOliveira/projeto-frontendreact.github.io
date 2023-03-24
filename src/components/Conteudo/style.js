@@ -14,6 +14,10 @@ export const ConteudoDaPagina = styled.div`
 
     font-family: space;
     font-size: 1rem;
+
+    @media (max-width: 1000px){
+        justify-content: center;
+    }
 `
 
 export const BotaoVoltar = styled.button`
@@ -30,4 +34,14 @@ export const BotaoVoltar = styled.button`
 `
 export const AindaNaoDisponivel = styled.h3`
     font-size: 4rem;
+`
+export const Voltar = styled.div`
+    display: flex;
+    margin-top: 20px;
+`
+
+export const ImagemVoltar = styled.img`
+    height: 40px;
+
+    cursor: pointer;
 `

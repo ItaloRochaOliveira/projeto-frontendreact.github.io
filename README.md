@@ -1,4 +1,4 @@
-# **Projeto React e API's**
+# **Projeto Front**
 
 ## 📖 Introdução 
 

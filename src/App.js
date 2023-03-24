@@ -79,7 +79,6 @@ function App() {
       <Header />
       <Conteudo produtos={produtos} iconeCarrinho={iconeCarrinho}/>
       <Footer />
-
       <GlobalStyle />
     </ContainerGeral>
   );

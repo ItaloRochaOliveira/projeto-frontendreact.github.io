@@ -4,10 +4,13 @@ const UlHeader = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+
   li {
     padding: 18px 10px;
   }
+
   z-index: 3;
+  
   @media (max-width: 600px) {
     flex-flow: column nowrap;
     background-color: #0d2538;

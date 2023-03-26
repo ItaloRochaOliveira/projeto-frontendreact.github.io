@@ -1,35 +1,49 @@
 import React from "react";
-import { BotaoDoCard, CardBox, EspacoEntreItens, ImageCard, NomeDoProduto } from "./style";
+import {
+  BotaoDoCard,
+  CardBox,
+  EspacoEntreItens,
+  ImageCard,
+  NomeDoProduto,
+} from "./style";
 
 export default function Card({
-    id,
-    name,
-    value,
-    img,
-    quantidade,
+  produtos,
+  id,
+  name,
+  value,
+  img,
 
-    eventItensNoCarrinho,
+  setTrocarTela,
+
+  setProdutoDetalhe,
 }) {
-    return(
-        <CardBox>
-            <ImageCard src={img} alt={name}/>
+  const detalhesProduto = () => {
+    const produtoEncontrado = produtos.find((produto) => produto.id === id);
+    setProdutoDetalhe(produtoEncontrado);
 
-            <EspacoEntreItens />
-            <NomeDoProduto>{name}</NomeDoProduto>
-            <NomeDoProduto><h3>{value.toLocaleString("pt-br", {
-                  style: "currency",
-                  currency: "BRL",
-                })}</h3></NomeDoProduto>
-            <EspacoEntreItens />
+    setTrocarTela("detalhes");
+  };
+  return (
+    <CardBox>
+      <ImageCard src={img} alt={name} />
 
-            <BotaoDoCard onClick={() => {eventItensNoCarrinho({
-                id: id,
-                name: name,
-                value: value,
-                img: img,
-                quantidade: quantidade,
-            })}}>Adicionar ao carrinho</BotaoDoCard>
-            <EspacoEntreItens />
-        </CardBox>
-    )
+      <EspacoEntreItens />
+      <NomeDoProduto>{name}</NomeDoProduto>
+      <NomeDoProduto>
+        <h3>
+          {value.toLocaleString("pt-br", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </h3>
+      </NomeDoProduto>
+      <EspacoEntreItens />
+
+      <BotaoDoCard onClick={() => detalhesProduto()}>
+        Ver detalhes do produto
+      </BotaoDoCard>
+      <EspacoEntreItens />
+    </CardBox>
+  );
 }

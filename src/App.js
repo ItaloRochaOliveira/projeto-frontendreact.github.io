@@ -1,18 +1,17 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import Header from "./components/Header/Header"
-import Conteudo from "./components/Conteudo/Conteudo"
-import Footer from "./components/Footer/Footer"
+import Header from "./components/Header/Header";
+import Conteudo from "./components/Conteudo/Conteudo";
+import Footer from "./components/Footer/Footer";
 
-import naveAcustica from "./img/nave-acustica.jpg"
-import kitSistemaSolar from "./img/kit-sistema-solar.jpg"
-import onibusEspacial from "./img/onibus-espacial.jpg"
-import espacoComMatematica from "./img/espaco-com-matematica.jpg"
-import coelhoEspacial from "./img/coelho-espacial.jpg"
-import brinquedoAstronauta from "./img/brinquedo-astronauta.jpg"
+import naveAcustica from "./img/nave-acustica.jpg";
+import kitSistemaSolar from "./img/kit-sistema-solar.jpg";
+import onibusEspacial from "./img/onibus-espacial.jpg";
+import espacoComMatematica from "./img/espaco-com-matematica.jpg";
+import coelhoEspacial from "./img/coelho-espacial.jpg";
+import brinquedoAstronauta from "./img/brinquedo-astronauta.jpg";
 
-import iconeCarrinho from "./img/icone-carrinho.png"
-
+import iconeCarrinho from "./img/icone-carrinho.png";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -20,19 +19,18 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-`
+`;
 const ContainerGeral = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   max-width: 100vw;
-  
-`
+`;
 const produtos = [
   {
     id: 0,
     name: "Nave acustica",
-    value: 70.10,
+    value: 70.1,
     img: naveAcustica,
     quantidade: 0,
   },
@@ -70,14 +68,14 @@ const produtos = [
     value: 83,
     img: brinquedoAstronauta,
     quantidade: 0,
-  }
-]
+  },
+];
 
 function App() {
   return (
     <ContainerGeral>
       <Header />
-      <Conteudo produtos={produtos} iconeCarrinho={iconeCarrinho}/>
+      <Conteudo produtos={produtos} iconeCarrinho={iconeCarrinho} />
       <Footer />
       <GlobalStyle />
     </ContainerGeral>

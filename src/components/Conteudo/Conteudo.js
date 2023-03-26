@@ -82,7 +82,11 @@ export default function Conteudo({ produtos, iconeCarrinho }) {
         />
       </ConteudoDaPagina>
     );
-  } else if (trocarTela === "carrinho-1" || trocarTela === "carrinho-2") {
+  } else if (
+    trocarTela === "carrinho" ||
+    trocarTela === "carrinho-1" ||
+    trocarTela === "carrinho-2"
+  ) {
     return (
       <ConteudoDaPagina>
         <Carrinho

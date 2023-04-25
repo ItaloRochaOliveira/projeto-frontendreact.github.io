@@ -55,8 +55,6 @@ export default function Conteudo({ produtos, iconeCarrinho }) {
     }
   }, [itensNoCarrinho]);
 
-  console.log(trocarTela);
-
   if (trocarTela === "home") {
     return (
       <ConteudoDaPagina>

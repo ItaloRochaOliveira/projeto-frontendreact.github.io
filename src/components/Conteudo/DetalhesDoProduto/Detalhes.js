@@ -20,7 +20,6 @@ import {
   SecondArticle,
   BotaoCarrinho,
   Porcentagem,
-  Add,
   AddContainer,
   AddStyle,
   AddButtons,
@@ -109,7 +108,7 @@ export function Detalhes({
                   style: "currency",
                   currency: "BRL",
                 })}
-              </s>{" "}
+              </s>
               <Porcentagem>20% off</Porcentagem>
             </h4>
             <h2>

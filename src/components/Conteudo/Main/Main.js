@@ -14,9 +14,6 @@ export default function Main({
   setTrocarTela,
 
   produtos,
-  eventItensNoCarrinho,
-
-  itensNoCarrinho,
 
   ordenarItens,
   setOrdenarItens,

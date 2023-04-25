@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Main from "../Conteudo/Main/Main";
 import { Cabecalho, EspacoEntreLi, StyledBurger, UlHeader } from "./style";
 
 export default function Header() {
@@ -14,7 +13,7 @@ export default function Header() {
       </StyledBurger>
       <nav>
         <UlHeader open={open}>
-          <a href={<Main />} target="_self">
+          <a href={"*"} target="_self">
             <EspacoEntreLi>Home</EspacoEntreLi>
           </a>
           <a href="#about">
